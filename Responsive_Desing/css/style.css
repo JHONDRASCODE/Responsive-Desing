@@ -1,30 +1,86 @@
-h1{
-  text-align: center;
-}
 body {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  text-shadow: 1px 1px 1px #ccc;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4%;
+  justify-content: center;
+  display: block;
 }
 
 .pelicula {
-  display: inline-block;
-  width: 300px;
-  height: 400px;
   margin: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
   padding: 10px;
-  border: 3px solid #878282;
-  border-radius: 30px;
-  box-sizing: border-box;
+  text-align: center;
 }
-
+.peli{
+  display: flex;
+  justify-content: center;
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  margin-top: 4%;
+}
 .pelicula img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
+}
+
+.pelicula:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #f4eaea;
+}
+
+.pelicula {
+  transition: all 0.5s ease;
+}
+
+.pelicula {
+  box-shadow: 0 0 5px #ccc;
+}
+
+@media (max-width: 1024px) {
+  .peliculas {
+      flex-direction: column;
+  }
+
+  .pelicula {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pelicula {
+      margin: 0 0 10px 0;
+  }
+
+  .pelicula p {
+      display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .peliculas {
+      flex-direction: row;
+  }
+
+  .pelicula:nth-of-type(4) {
+      margin-top: 10px;
+  }
 }
